@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Title
+
+---
+
+# Agenda
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+---
+
+# Introduction
+
+---
+
+# Something
+
+    </textarea>
+    <script src="remark-latest.min.js"></script>
+    <script src="node_modules/myo/myo.js"></script>
+    <script>
+      var slideshow = remark.create();
+
+      var myo = Myo.create();
+
+      myo.on('wave_out', function (edge) {
+        if (edge) {
+          slideshow.gotoNextSlide();
+        }
+      });
+
+      myo.on('wave_in', function (edge) {
+        if (edge) {
+          slideshow.gotoPreviousSlide();
+        }
+      });
+    </script>
+  </body>
+</html>
