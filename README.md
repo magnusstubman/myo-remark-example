@@ -4,7 +4,7 @@ It appears that connecting the Myo with your remark presentation trivial:
 
 
 
-```
+```javascript
 var slideshow = remark.create();
 
 var myo = Myo.create();
